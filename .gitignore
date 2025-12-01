@@ -110,6 +110,7 @@ config/local_*.json
 *.hdf5
 *.pkl
 *.joblib
+*.csv
 
 # Large compressed data
 *.zip
