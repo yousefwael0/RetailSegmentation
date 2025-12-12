@@ -1,27 +1,23 @@
-# OS / editor junk
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*.tmp
+# ============================================
+# RETAIL BUYER SEGMENTATION - .gitignore
+# ============================================
 
-# Python bytecode and cache
+# ============================================
+# PYTHON
+# ============================================
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
-.env
-.venv
-venv/
-env/
-.conda/
-conda_env/
+# C extensions
+*.so
 
-# Package / build artifacts
+# Distribution / packaging
+.Python
 build/
-dist/
 develop-eggs/
+dist/
 downloads/
 eggs/
 .eggs/
@@ -31,90 +27,250 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Logs
-logs/
-*.log
+# PyInstaller
+*.manifest
+*.spec
 
-# Jupyter notebooks
-.ipynb_checkpoints/
-.jupyter/
-.profile_default/
-*.nbconvert.ipynb
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# VSCode / IDEs
-.vscode/
-.idea/
-.spyproject/
-.ropeproject/
-
-# pytest / coverage / mypy
-.pytest_cache/
-.coverage
+# Unit test / coverage reports
 htmlcov/
 .tox/
-.mypy_cache/
-.pytype/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
 coverage.xml
-.cache/
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
-# Django / Flask (if you have a small API)
+# Translations
+*.mo
+*.pot
+
+# ============================================
+# VIRTUAL ENVIRONMENTS
+# ============================================
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.conda/
+
+# ============================================
+# JUPYTER NOTEBOOK
+# ============================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# Jupyter Notebook temporary files
+.virtual_documents/
+
+# ============================================
+# STREAMLIT
+# ============================================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ============================================
+# IDE / EDITORS
+# ============================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================
+# DATA FILES
+# ============================================
+# Large data files (uncomment if data is too large for git)
+# data.csv
+# data_modeled_scaled.csv
+
+# Temporary data files
+*.tmp
+*.temp
+*_temp.csv
+*_backup.csv
+
+# Database files
+*.db
+*.sqlite
 *.sqlite3
-instance/
-*.pyproj
 
-# Retail data and model artifacts
-data/raw/
-data/interim/
-data/tmp/
-data/temp/
-data/external/
-**/raw_data/
-**/scratch/
-**/tmp/
+# ============================================
+# MODEL FILES & ARTIFACTS
+# ============================================
+# Uncomment these if models are too large or rebuilt frequently
+# models/*.pkl
+# models/*.joblib
+# models/*.h5
+# models/*.pt
 
-# Optionally ignore processed data if large
-data/processed/
-data/outputs/
-outputs/
-reports/figures/
+# Keep model directory structure
+!models/.gitkeep
+!data/.gitkeep
 
-# Model files and experiment runs
-models/
+# Training artifacts
 checkpoints/
-artifacts/
+logs/
 runs/
-mlruns/
 wandb/
-tensorboard/
-tb_logs/
 
-# Credentials / config
+# ============================================
+# ENVIRONMENT & SECRETS
+# ============================================
+.env
+.env.local
+.env.*.local
 *.env
-.env.*
-*.secrets.*
-secrets/
-config/local_*.yml
-config/local_*.yaml
-config/local_*.json
 
-# CSVs / exports you do not need in Git (keep only if essential)
-*.tsv
-*.parquet
-*.feather
-*.h5
-*.hdf5
-*.pkl
-*.joblib
-*.csv
+# Configuration files with secrets
+secrets.yaml
+secrets.json
+config.local.yml
 
-# Large compressed data
+# ============================================
+# DOCUMENTATION
+# ============================================
+# Compiled documentation
+docs/_build/
+docs/.doctrees/
+site/
+
+# ============================================
+# MISC
+# ============================================
+# Compressed files
 *.zip
-*.gz
-*.bz2
-*.xz
+*.tar.gz
+*.rar
 *.7z
+
+# Log files
+*.log
+logs/
+*.out
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.orig
+
+# ============================================
+# PROJECT SPECIFIC
+# ============================================
+# Exported results
+*_results.csv
+segmentation_results*.csv
+predictions*.csv
+
+# Development files
+scratch/
+experiments/
+notebooks/archive/
+
+# Large visualizations
+*.png
+*.jpg
+*.jpeg
+*.gif
+!docs/images/*.png
+!docs/images/*.jpg
+
+# HTML reports
+*.html
+!docs/*.html
+
+# ============================================
+# DOCKER
+# ============================================
+# Docker
+*.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ============================================
+# CI/CD
+# ============================================
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# ============================================
+# TESTING
+# ============================================
+.tox/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.coverage
+htmlcov/
+
+# ============================================
+# Keep Empty Directories
+# ============================================
+!.gitkeep

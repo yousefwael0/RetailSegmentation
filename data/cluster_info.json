@@ -1,0 +1,20 @@
+{
+  "0": {
+    "name": "Budget-Conscious Families",
+    "size": 1074,
+    "avg_income": 35766.273510242085,
+    "avg_spend": 105.41247672253259
+  },
+  "1": {
+    "name": "Middle-Income Shoppers",
+    "size": 667,
+    "avg_income": 59442.82458770615,
+    "avg_spend": 795.752623688156
+  },
+  "3": {
+    "name": "Premium High Spenders",
+    "size": 499,
+    "avg_income": 76324.01653306613,
+    "avg_spend": 1428.87374749499
+  }
+}
