@@ -302,7 +302,7 @@ The model uses the following engineered features:
 
 2. **Spending Features**
    - `total_spend` (sum of all spending categories)
-   - `avg_spend_per_category` (mean spending)
+   - `avg_spend` (mean spending)
    - `spend_wine_ratio` (wine spend / total spend)
    - `spend_meat_ratio` (meat spend / total spend)
 

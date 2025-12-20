@@ -52,7 +52,7 @@ def create_features(data):
                      'spend_fish', 'spend_sweets', 'spend_gold']
     
     df['total_spend'] = df[spending_cols].sum(axis=1)
-    df['avg_spend_per_category'] = df[spending_cols].mean(axis=1)
+    df['avg_spend'] = df[spending_cols].mean(axis=1)
     
     # Ratios (add 1 to avoid division by zero)
     df['spend_wine_ratio'] = df['spend_wine'] / (df['total_spend'] + 1)
